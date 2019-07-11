@@ -1,9 +1,7 @@
 # react-native-sip
+![npm version](https://badge.fury.io/js/react-native-sip.svg)
 
 This repo it's based on datso/react-native-pjsip. 
-
-A [PJSIP](http://www.pjsip.org/) module for React Native.
-
 
 ## Support
 - Currently support for iOS and Android.  
@@ -13,10 +11,17 @@ A [PJSIP](http://www.pjsip.org/) module for React Native.
 - Android version is based on [react-native-pjsip-builder](https://github.com/datso/react-native-pjsip-builder)
 - iOS version is based on [Vialer-pjsip-iOS](https://github.com/VoIPGRID/Vialer-pjsip-iOS)
 
+## To do
+
+ - [x] Send SIP Messages (IM) iOS
+ - [ ] Send SIP Messages (IM) Android
+ - [ ] isTyping iOS
+ - [ ] isTyping Android
+
 ## Installation
 
-- [iOS](https://github.com/datso/react-native-sip/blob/master/docs/installation_ios.md)
-- [Android](https://github.com/datso/react-native-sip/blob/master/docs/installation_android.md)
+- [iOS](https://github.com/florindumitru/react-native-sip/blob/master/docs/installation_ios.md)
+- [Android](https://github.com/florindumitru/react-native-sip/blob/master/docs/installation_android.md)
 
 ## Usage
 
