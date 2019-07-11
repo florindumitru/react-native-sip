@@ -1,5 +1,6 @@
 # react-native-sip
 
+This repo it's based on datso/react-native-pjsip. 
 A [PJSIP](http://www.pjsip.org/) module for React Native.
 
 ## Support
