@@ -5,11 +5,11 @@
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "author": {
-    "name": "Vadim Ruban",
-    "email": "vadim.ruban@carusto.com"
+    "name": "Florin Dumitru",
+    "email": "dumitru.florin@outlook.com"
   },
   "bugs": {
-    "url": "https://github.com/datso/react-native-pjsip/issues"
+    "url": "https://github.com/florindumitru/react-native-sip/issues"
   },
   "dependencies": {
     "events": "1.1.0"
@@ -26,9 +26,9 @@
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3"
   },
-  "name": "react-native-pjsip",
-  "description": "PJSIP module for React Native",
-  "homepage": "https://github.com/datso/react-native-pjsip",
+  "name": "react-native-sip",
+  "description": "SIP module for React Native",
+  "homepage": "https://github.com/florindumitru/react-native-sip",
   "keywords": [
     "react-component",
     "react-native",
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/datso/react-native-pjsip.git"
+    "url": "git+https://github.com/florindumitru/react-native-sip.git"
   },
   "version": "2.8.0"
 }
