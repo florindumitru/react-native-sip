@@ -1,7 +1,9 @@
 # react-native-sip
 
 This repo it's based on datso/react-native-pjsip. 
+
 A [PJSIP](http://www.pjsip.org/) module for React Native.
+
 
 ## Support
 - Currently support for iOS and Android.  
@@ -13,21 +15,21 @@ A [PJSIP](http://www.pjsip.org/) module for React Native.
 
 ## Installation
 
-- [iOS](https://github.com/datso/react-native-pjsip/blob/master/docs/installation_ios.md)
-- [Android](https://github.com/datso/react-native-pjsip/blob/master/docs/installation_android.md)
+- [iOS](https://github.com/datso/react-native-sip/blob/master/docs/installation_ios.md)
+- [Android](https://github.com/datso/react-native-sip/blob/master/docs/installation_android.md)
 
 ## Usage
 
 First of all you have to initialize module to be able to work with it.
 
 There are some interesting moment in initialization.
-When application goes to background, PJSIP module is still working and able to receive calls, but your javascipt is totally suspended.
+When application goes to background, sip module is still working and able to receive calls, but your javascipt is totally suspended.
 When User open your application, javascript start to work and now your js application need to know what status have your account or may be you have pending incoming call.
 
-So thats why first step should call start method for pjsip module.
+So thats why first step should call start method for sip module.
 
 ```javascript
-import {Endpoint} from 'react-native-pjsip'
+import {Endpoint} from 'react-native-sip'
 
 let endpoint = new Endpoint();
 let state = await endpoint.start(); // List of available accounts and calls when RN context is started, could not be empty because Background service is working on Android
@@ -66,7 +68,7 @@ endpoint.createAccount().then((account) => {
 ```
 
 To be able to make a call first of all you should createAccount, and pass account instance into Endpoint.makeCall function.
-This function will return a promise that will be resolved when PjSIP initializes the call.
+This function will return a promise that will be resolved when sip initializes the call.
 
 ```javascript
 let options = {
