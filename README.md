@@ -1,4 +1,4 @@
-# react-native-pjsip
+# react-native-sip
 
 A [PJSIP](http://www.pjsip.org/) module for React Native.
 
