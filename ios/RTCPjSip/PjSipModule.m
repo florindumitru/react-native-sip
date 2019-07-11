@@ -79,6 +79,18 @@ RCT_EXPORT_METHOD(sendMessage: (int) accountId destination: (NSString *) destina
     }
 }
 
+RCT_EXPORT_METHOD(imTyping: (int) accountId destination: (NSString *) destination is_typing: (BOOL *) is_typing callback:(RCTResponseSenderBlock) callback) {
+    @try {
+        PjSipEndpoint* endpoint = [PjSipEndpoint instance];
+        PjSipAccount *account = [endpoint findAccount:accountId];
+        [endpoint imTyping:account destination:destination is_typing:is_typing];
+        callback(@[@TRUE]);
+    }
+    @catch (NSException * e) {
+        callback(@[@FALSE, e.reason]);
+    }
+}
+
 #pragma mark - Call Actions
 
 RCT_EXPORT_METHOD(makeCall: (int) accountId destination: (NSString *) destination callSettings:(NSDictionary*) callSettings msgData:(NSDictionary*) msgData callback:(RCTResponseSenderBlock) callback) {

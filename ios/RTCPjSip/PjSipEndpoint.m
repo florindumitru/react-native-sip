@@ -221,6 +221,16 @@
     }
 }
 
+-(void) imTyping:(PjSipAccount *) account destination:(NSString *)destination is_typing:(BOOL *)is_typing  {
+    
+    pj_str_t callDest = pj_str((char *) [destination UTF8String]);
+    
+    pj_status_t status = pjsua_im_typing(account.id, &callDest, is_typing, NULL);
+    if (status != PJ_SUCCESS) {
+        [NSException raise:@"Failed to send is_Typing" format:@"See device logs for more details."];
+    }
+}
+
 
 #pragma mark Calls
 

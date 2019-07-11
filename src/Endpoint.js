@@ -274,6 +274,20 @@ export default class Endpoint extends EventEmitter {
         });
     }
 
+    imTyping(account, destination, isTyping) {
+        destination = this._normalize(account, destination);
+
+        return new Promise(function(resolve, reject) {
+            NativeModules.PjSipModule.imTyping(account.getId(), destination, isTyping, (successful, data) => {
+                if (successful) {
+                    resolve(data);
+                } else {
+                    reject(data);
+                }
+            });
+        });
+    }
+
 
     /**
      * Send response to incoming INVITE request.
