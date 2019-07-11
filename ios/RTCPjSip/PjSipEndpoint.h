@@ -30,7 +30,7 @@
 -(PjSipCall *)findCall:(int)callId;
 -(void)useSpeaker;
 -(void)useEarpiece;
-
+-(void)sendMessage:(PjSipAccount *) account destination:(NSString *)destination msg:(NSString *)msg ;
 -(void)changeOrientation: (NSString*) orientation;
 -(void)changeCodecSettings: (NSDictionary*) codecSettings;
 

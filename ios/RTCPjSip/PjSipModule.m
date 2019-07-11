@@ -67,6 +67,18 @@ RCT_EXPORT_METHOD(registerAccount: (int) accountId renew:(BOOL) renew callback:(
     }
 }
 
+RCT_EXPORT_METHOD(sendMessage: (int) accountId destination: (NSString *) destination msg: (NSString *) msg callback:(RCTResponseSenderBlock) callback) {
+    @try {
+        PjSipEndpoint* endpoint = [PjSipEndpoint instance];
+        PjSipAccount *account = [endpoint findAccount:accountId];
+        [endpoint sendMessage:account destination:destination msg:msg];
+        callback(@[@TRUE]);
+    }
+    @catch (NSException * e) {
+        callback(@[@FALSE, e.reason]);
+    }
+}
+
 #pragma mark - Call Actions
 
 RCT_EXPORT_METHOD(makeCall: (int) accountId destination: (NSString *) destination callSettings:(NSDictionary*) callSettings msgData:(NSDictionary*) msgData callback:(RCTResponseSenderBlock) callback) {

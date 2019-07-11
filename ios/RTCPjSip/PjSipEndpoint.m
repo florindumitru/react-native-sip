@@ -210,6 +210,17 @@
     return self.accounts[@(accountId)];
 }
 
+-(void) sendMessage:(PjSipAccount *) account destination:(NSString *)destination msg:(NSString *)msg  {
+    pj_str_t mime = pj_str((char *) [@"text" UTF8String]);
+    pj_str_t content = pj_str((char *) [msg UTF8String]);
+    pj_str_t callDest = pj_str((char *) [destination UTF8String]);
+
+    pj_status_t status = pjsua_im_send(account.id, &callDest, NULL, &content, NULL, NULL);
+    if (status != PJ_SUCCESS) {
+        [NSException raise:@"Failed to send message" format:@"See device logs for more details."];        
+    }
+}
+
 
 #pragma mark Calls
 

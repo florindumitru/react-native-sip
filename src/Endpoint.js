@@ -253,6 +253,29 @@ export default class Endpoint extends EventEmitter {
     }
 
     /**
+     * Send message to the specified URI.
+     * -
+     *
+     * @param account {Account}
+     * @param destination {String} Destination SIP URI.
+     * @param msg {String} Message.
+     */
+    sendMessage(account, destination, msg) {
+        destination = this._normalize(account, destination);
+
+        return new Promise(function(resolve, reject) {
+            NativeModules.PjSipModule.sendMessage(account.getId(), destination, msg, (successful, data) => {
+                if (successful) {
+                    resolve(data);
+                } else {
+                    reject(data);
+                }
+            });
+        });
+    }
+
+
+    /**
      * Send response to incoming INVITE request.
      *
      * @param call {Call} Call instance
