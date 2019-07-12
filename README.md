@@ -15,7 +15,7 @@ This repo it's based on datso/react-native-pjsip.
 
  - [x] Send SIP Messages (IM) iOS
  - [ ] Send SIP Messages (IM) Android
- - [ ] isTyping iOS
+ -  [x] isTyping iOS
  - [ ] isTyping Android
 
 ## Installation
@@ -104,5 +104,3 @@ endpoint.addListener("call_terminated", (newCall) => {
 2. [Accounts](https://github.com/florindumitru/react-native-sip/blob/master/docs/accounts.md)
 3. [Calls](https://github.com/florindumitru/react-native-sip/blob/master/docs/calls.md)
 4. [Settings](https://github.com/florindumitru/react-native-sip/blob/master/docs/settings.md)
-
-
