@@ -117,4 +117,4 @@ endpoint.addListener("call_terminated", (newCall) => {
 
 
 
-*This repo it's based on a fork of [datso/react-native-pjsip](https://raw.githubusercontent.com/datso/react-native-pjsip).* 
+*This repo it's based on a fork of [datso/react-native-pjsip](https://github.com/datso/react-native-pjsip).* 
