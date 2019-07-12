@@ -1,4 +1,5 @@
 
+
 # react-native-sip
 ![npm version](https://badge.fury.io/js/react-native-sip.svg)
 
@@ -114,4 +115,6 @@ endpoint.addListener("call_terminated", (newCall) => {
 4. [Settings](https://github.com/florindumitru/react-native-sip/blob/master/docs/settings.md)
 
 
-*This repo it's based on datso/react-native-pjsip.* 
+
+
+*This repo it's based on a fork of [datso/react-native-pjsip](https://raw.githubusercontent.com/datso/react-native-pjsip).* 
