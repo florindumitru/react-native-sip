@@ -1,5 +1,12 @@
 # iOS installation
 
+For RN 0.60+ you need to execute the following commands:
+
+    yarn add react-native-sip
+    cd ios
+    pod install
+
+
 ## Step 1
 Link library
 
