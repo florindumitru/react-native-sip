@@ -1,7 +1,13 @@
+
 # react-native-sip
 ![npm version](https://badge.fury.io/js/react-native-sip.svg)
 
-This repo it's based on datso/react-native-pjsip. 
+**UPDATE**: Now is compatible with RN 0.60+
+For RN 0.60+ you need to execute the following commands:
+
+    cd ios
+    pod install
+
 
 ## Support
 - Currently support for iOS and Android.  
@@ -104,3 +110,6 @@ endpoint.addListener("call_terminated", (newCall) => {
 2. [Accounts](https://github.com/florindumitru/react-native-sip/blob/master/docs/accounts.md)
 3. [Calls](https://github.com/florindumitru/react-native-sip/blob/master/docs/calls.md)
 4. [Settings](https://github.com/florindumitru/react-native-sip/blob/master/docs/settings.md)
+
+
+*This repo it's based on datso/react-native-pjsip.* 
