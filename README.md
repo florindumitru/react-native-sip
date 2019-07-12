@@ -3,6 +3,7 @@
 ![npm version](https://badge.fury.io/js/react-native-sip.svg)
 
 **UPDATE**: Now is compatible with RN 0.60+
+
 For RN 0.60+ you need to execute the following commands:
 
     cd ios
